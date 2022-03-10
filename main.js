@@ -1,13 +1,26 @@
+/*global $*/
+/*global timer*/
+/*global msec*/
+/*global sec*/
+/*global min*/
+/*global hour*/
+/*global msecNumber*/
+/*global secNumber*/
+/*global minNumber*/
+/*global hourNumber*/
+
+
+
 $(function() {
  
    
     $('#tgCountupTimer #startButton').click(function() {
        
-        $('#tgCountupTimer .time').html('00:00:00:0');
+        $('#tgCountupTimer .time').html;
  
         timer = setInterval("countUp()", 100);
  
-        $(this).attr('disabled', 'disabled');
+        $(this).attr('disabled','disabled');
         $('#tgCountupTimer #stopButton').removeAttr('disabled');
     });
  
@@ -16,8 +29,9 @@ $(function() {
     $('#tgCountupTimer #stopButton').click(function() {
         clearInterval(timer);
  
-        $(this).attr('disabled', 'disabled');
+        $(this).attr('disabled','disabled');
         $('#tgCountupTimer #resetButton').removeAttr('disabled');
+        $('#tgCountupTimer #startButton').removeAttr('disabled');
     });
  
  
@@ -32,8 +46,8 @@ $(function() {
         clearInterval(timer);
  
         $(this).attr('disabled', 'disabled');
-        $('#tgCountupTimer #stopButton').attr('disabled','disabled');
-        $('#tgCountupTimer #startButton').removeAttr('disabled');
+        $('#tgCountupTimer #stopButton').attr('disabled');
+        $('#tgCountupTimer #startButton').removeAttr('disabled','disabled');
     });
 });
  
